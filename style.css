@@ -1,0 +1,119 @@
+.container {
+    width: 60%;
+    height: 38vh;
+    border: 7px solid rgb(4, 8, 4);
+    margin: 43px auto;
+    background-color: black;
+    display: flex;
+    align-items: flex-end;
+
+}
+
+
+.bar {
+    flex: 1;
+    height: 38vh;
+    margin: 0px;
+    transition: all 0.5 ease-in-out;
+
+}
+
+#animate1 {
+    background-color: blueviolet;
+}
+
+#animate2 {
+    background-color: rgb(240, 116, 234);
+}
+
+#animate3 {
+    background-color: rgb(238, 74, 101);
+}
+
+#animate4 {
+    background-color: rgb(247, 103, 37);
+}
+
+#animate5 {
+    background-color: yellow;
+}
+
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    margin: auto;
+    height: 30px;
+
+}
+
+
+
+.btn {
+    width: 80px;
+    height: 30px;
+
+}
+
+
+#start {
+    color: white;
+    background-color: rgb(0, 180, 0);
+    border: 2px solid rgb(0, 180, 0);
+    border-radius: 5px;
+    padding: 2px 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+#start:hover {
+    border: 2px solid blue;
+
+}
+
+#stop {
+
+    color: white;
+    background-color: red;
+    border: 2px solid red;
+    border-radius: 5px;
+    padding: 2px 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    position: relative;
+
+}
+
+#stop:hover {
+    border: 2px solid blue;
+
+}
+
+@media screen and (max-width: 460px) {
+    .box {
+        /* border: 2px solid blue; */
+        width: 60%;
+        position: absolute;
+        left: 20%;
+
+    }
+
+    .btn {
+        width: 50px;
+    }
+
+    #start {
+        position: absolute;
+        right: 55%;
+
+
+    }
+
+    #stop {
+        position: absolute;
+        left: 55%;
+        font-size: 0.9rem;
+    }
+}

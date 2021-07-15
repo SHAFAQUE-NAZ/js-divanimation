@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+    <div class="container">
+        <div class="bar" id="animate1"></div>
+        <div class="bar" id="animate2"></div>
+        <div class="bar" id="animate3"></div>
+        <div class="bar" id="animate4"></div>
+        <div class="bar" id="animate5"></div>
+
+    </div>
+    <div class="box">
+
+        <button class="btn" id="start">Start</button>
+
+
+        <button class="btn" id="stop">Stop</button>
+
+    </div>
+
+
+    <script>
+        const start = document.getElementById("start");
+        const stop = document.getElementById("stop");
+        const bar1 = document.getElementById("animate1");
+        const bar2 = document.getElementById("animate2");
+        const bar3 = document.getElementById("animate3");
+        const bar4 = document.getElementById("animate4");
+        const bar5 = document.getElementById("animate5");
+
+
+
+        const getRandomHeightBetween1to38vh = () => {
+            var interval = setInterval(() => {
+                const arr = [(Math.floor(Math.random() * 38 + 1)), (Math.floor(Math.random() * 38 + 1)), (Math.floor(Math.random() * 38 + 1)), (Math.floor(Math.random() * 38 + 1)), (Math.floor(Math.random() * 38 + 1))];
+
+
+                bar1.animate({
+                    height: `${arr[0]}vh`
+
+                }, 1000)
+                setTimeout(() => {
+                    bar1.style.height = `${arr[0]}vh`
+
+                }, 1000)
+
+                bar2.animate({
+                    height: `${arr[1]}vh`
+
+                }, 1000)
+                setTimeout(() => {
+                    bar2.style.height = `${arr[1]}vh`
+
+                }, 1000)
+
+                bar3.animate({
+                    height: `${arr[2]}vh`
+
+                }, 1000)
+                setTimeout(() => {
+                    bar3.style.height = `${arr[2]}vh`
+
+                }, 1000)
+
+                bar4.animate({
+                    height: `${arr[3]}vh`
+
+                }, 1000)
+                setTimeout(() => {
+                    bar4.style.height = `${arr[3]}vh`
+
+                }, 1000)
+
+                bar5.animate({
+                    height: `${arr[4]}vh`
+
+                }, 1000)
+                setTimeout(() => {
+                    bar5.style.height = `${arr[4]}vh`
+
+                }, 1000)
+
+
+            }, 1000)
+
+            stop.addEventListener("click", function () {
+                clearInterval(interval)
+            })
+
+        }
+
+        start.addEventListener("click", getRandomHeightBetween1to38vh);
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
